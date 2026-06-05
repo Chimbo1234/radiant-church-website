@@ -52,9 +52,10 @@ export function Navbar() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-serif text-2xl tracking-widest font-light text-foreground">
-                AFM
-              </span>
+             <span className="font-serif tracking-widest font-light text-foreground leading-tight">
+  <span className="block text-lg">Apostolic Faith Mission</span>
+  <span className="block text-lg text-center">In India</span>
+</span>
             </div>
           </Link>
 
