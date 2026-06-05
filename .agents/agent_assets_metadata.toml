@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "hfWMOjSojsZ3tzT-2bVXJ"
+uri = "file://artifacts/church-website/public/images/hero-bg.png"
+type = "image"
+title = "Hero cathedral light"
+
+[[generated]]
+id = "i_bsnVozzyeN1Re0IJVAj"
+uri = "file://artifacts/church-website/public/images/sermon-1.png"
+type = "image"
+title = "Sermon thumbnail 1"
+
+[[generated]]
+id = "U9t-4TFVQKMUrvDNAMuAV"
+uri = "file://artifacts/church-website/public/images/sermon-2.png"
+type = "image"
+title = "Sermon thumbnail 2"
+
+[[generated]]
+id = "lHNLdX5bRlW33SEwKT6w6"
+uri = "file://artifacts/church-website/public/images/sermon-3.png"
+type = "image"
+title = "Sermon thumbnail 3"
+
+[[generated]]
+id = "Oulct2rFiYWgGA8B1MdTG"
+uri = "file://artifacts/church-website/public/images/pastor.png"
+type = "image"
+title = "Pastor Portrait"
+
+[[generated]]
+id = "RVSy3Aj_E8ZVaPVUpxAVL"
+uri = "file://artifacts/church-website/public/images/event-1.png"
+type = "image"
+title = "Event elegant worship service"
+
+[[generated]]
+id = "Y6UmiqMUmv6ppnHdBG-6C"
+uri = "file://artifacts/church-website/public/images/event-2.png"
+type = "image"
+title = "Event community gathering"
+
+[[generated]]
+id = "ryTH_7SWsEHiI3y6EeLjI"
+uri = "file://artifacts/church-website/public/images/event-3.png"
+type = "image"
+title = "Event youth night"
+
+[[generated]]
+id = "TRZw_CXVt-esEjlDyk8kR"
+uri = "file://artifacts/church-website/public/images/blog-1.png"
+type = "image"
+title = "Blog open bible on table"
+
+[[generated]]
+id = "4wWmihx4IKYDRa4SF5Y-X"
+uri = "file://artifacts/church-website/public/images/blog-2.png"
+type = "image"
+title = "Blog person praying"

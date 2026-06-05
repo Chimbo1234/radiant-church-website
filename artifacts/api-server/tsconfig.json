@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "types": ["node"],
+    "noEmit": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "target": "es2022",
+    "lib": ["es2022"],
+    "isolatedModules": false,
+    "noEmitOnError": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/db": ["../../lib/db/src/index.ts"],
+      "@workspace/api-zod": ["../../lib/api-zod/src/index.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "../../lib/db/src",
+    "../../lib/api-zod/src"
+  ]
+}

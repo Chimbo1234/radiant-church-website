@@ -1,0 +1,141 @@
+Create a world-class, ultra-premium church website that looks like it was designed for a global luxury brand and a modern tech company combined.
+The website must feel powerful, spiritual, elegant, cinematic, clean, expensive, and highly advanced — not like a typical church website.
+
+TECH STACK:
+Use the best modern technologies for performance, scalability, animation, and premium UI/UX:
+
+Next.js 15
+React
+TypeScript
+Tailwind CSS
+Framer Motion
+GSAP (for cinematic animations)
+ShadCN UI
+Three.js (subtle premium 3D effects only)
+Lenis smooth scrolling
+Vercel optimized structure
+Fully responsive
+SEO optimized
+Accessibility optimized
+Extremely fast loading speed
+
+DESIGN DIRECTION:
+
+Main color theme should be WHITE and clean luxury minimalism
+Avoid excessive gradients
+Use subtle soft shadows, glassmorphism, elegant lighting, and premium spacing
+Use black, white, silver, soft gray, and very limited gold accents
+The website should feel like Apple, Tesla, Dior, and Hillsong combined
+Use cinematic transitions and smooth animations everywhere
+Massive typography hierarchy
+Minimalistic but emotionally powerful
+Every section must feel intentional and high-end
+Avoid clutter completely
+Use modern luxury fonts
+Add subtle hover micro-interactions
+Smooth parallax effects
+Soft glowing elements
+Premium image presentation
+Ultra-modern layouts
+
+WEBSITE GOAL:
+The site should instantly make visitors feel:
+
+Awe
+Excellence
+Peace
+Spiritual authority
+Trust
+Modernity
+Global impact
+
+PAGES TO INCLUDE:
+
+Home Page
+About Church
+Sermons
+Live Streaming
+Ministries
+Events
+Prayer Request
+Giving/Donations
+Contact
+Media Gallery
+Pastor Profile
+Blog/Devotionals
+
+HOME PAGE REQUIREMENTS:
+
+Stunning cinematic hero section
+Fullscreen premium layout
+Animated headline with spiritual impact
+Video background or subtle cinematic motion
+Floating glass cards
+Dynamic scroll-triggered animations
+Elegant call-to-action buttons
+Advanced section transitions
+Statistics counter section
+Upcoming events preview
+Sermon showcase carousel
+Testimonials
+Global mission section
+Modern footer with premium design
+
+ADVANCED FEATURES:
+
+AI chatbot assistant for church support
+Online prayer request system
+Live streaming integration
+Donation/payment integration
+Admin dashboard concept
+Multi-language support
+Dark/light mode
+Smart event management
+Newsletter system
+Mobile-first optimization
+CMS-ready architecture
+Advanced loading animations
+Scroll progress indicators
+Interactive timeline
+Audio sermon player
+Dynamic announcements
+Performance optimized animations
+
+ANIMATION STYLE:
+Animations must feel cinematic, smooth, elegant, and expensive:
+
+Slow luxury motion
+Smooth fade reveals
+Scroll-triggered section entrances
+Text reveal animations
+Layered parallax movement
+Floating UI motion
+Premium hover effects
+Apple-level smoothness
+
+UI/UX EXPECTATIONS:
+
+This should look like one of the best church websites in the world
+Every component should look custom-designed
+No generic templates
+Highly polished responsive design
+Pixel-perfect spacing and alignment
+Beautiful whitespace usage
+Modern storytelling structure
+Professional visual hierarchy
+
+CODING REQUIREMENTS:
+
+Clean scalable architecture
+Reusable components
+Production-ready code
+Organized folder structure
+Best coding practices
+Modern API structure
+Optimized assets
+Lazy loading everywhere
+Proper metadata
+Advanced component composition
+
+FINAL GOAL:
+Build a breathtaking luxury church website experience that feels futuristic, spiritual, elite, and unforgettable — something that could win international web design awards.

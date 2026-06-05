@@ -1,0 +1,494 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Church website API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: sermons
+    description: Sermon operations
+  - name: events
+    description: Event operations
+  - name: prayers
+    description: Prayer request operations
+  - name: blog
+    description: Blog and devotional operations
+  - name: contact
+    description: Contact and newsletter operations
+  - name: stats
+    description: Church statistics
+  - name: testimonials
+    description: Testimonial operations
+  - name: ministries
+    description: Ministry operations
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /sermons:
+    get:
+      operationId: listSermons
+      tags: [sermons]
+      summary: List sermons
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: series
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of sermons
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Sermon"
+
+  /sermons/featured:
+    get:
+      operationId: getFeaturedSermon
+      tags: [sermons]
+      summary: Get featured/latest sermon
+      responses:
+        "200":
+          description: Featured sermon
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Sermon"
+
+  /sermons/{id}:
+    get:
+      operationId: getSermon
+      tags: [sermons]
+      summary: Get sermon by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Sermon
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Sermon"
+
+  /events:
+    get:
+      operationId: listEvents
+      tags: [events]
+      summary: List events
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: upcoming
+          in: query
+          schema:
+            type: boolean
+      responses:
+        "200":
+          description: List of events
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
+
+  /events/{id}:
+    get:
+      operationId: getEvent
+      tags: [events]
+      summary: Get event by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Event
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+
+  /prayers:
+    post:
+      operationId: submitPrayerRequest
+      tags: [prayers]
+      summary: Submit a prayer request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrayerInput"
+      responses:
+        "201":
+          description: Prayer request submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Prayer"
+
+  /blog:
+    get:
+      operationId: listBlogPosts
+      tags: [blog]
+      summary: List blog posts and devotionals
+      parameters:
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: category
+          in: query
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of blog posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/BlogPost"
+
+  /blog/{id}:
+    get:
+      operationId: getBlogPost
+      tags: [blog]
+      summary: Get blog post by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Blog post
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogPost"
+
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [contact]
+      summary: Submit contact form
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Contact form submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
+
+  /newsletter:
+    post:
+      operationId: subscribeNewsletter
+      tags: [contact]
+      summary: Subscribe to newsletter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewsletterInput"
+      responses:
+        "201":
+          description: Subscribed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactResponse"
+
+  /stats:
+    get:
+      operationId: getChurchStats
+      tags: [stats]
+      summary: Get church statistics for display
+      responses:
+        "200":
+          description: Church stats
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChurchStats"
+
+  /testimonials:
+    get:
+      operationId: listTestimonials
+      tags: [testimonials]
+      summary: List testimonials
+      responses:
+        "200":
+          description: List of testimonials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Testimonial"
+
+  /ministries:
+    get:
+      operationId: listMinistries
+      tags: [ministries]
+      summary: List ministries
+      responses:
+        "200":
+          description: List of ministries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Ministry"
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+
+    Sermon:
+      type: object
+      required: [id, title, speaker, date, duration, series]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        speaker:
+          type: string
+        date:
+          type: string
+        duration:
+          type: string
+        series:
+          type: string
+        description:
+          type: ["string", "null"]
+        thumbnailUrl:
+          type: ["string", "null"]
+        videoUrl:
+          type: ["string", "null"]
+        audioUrl:
+          type: ["string", "null"]
+        scripture:
+          type: ["string", "null"]
+        featured:
+          type: boolean
+
+    Event:
+      type: object
+      required: [id, title, date, time, location, category]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        location:
+          type: string
+        category:
+          type: string
+        description:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        registrationUrl:
+          type: ["string", "null"]
+
+    PrayerInput:
+      type: object
+      required: [name, request]
+      properties:
+        name:
+          type: string
+        email:
+          type: ["string", "null"]
+        request:
+          type: string
+        isPrivate:
+          type: boolean
+
+    Prayer:
+      type: object
+      required: [id, name, request, createdAt]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        request:
+          type: string
+        createdAt:
+          type: string
+        isPrivate:
+          type: boolean
+
+    BlogPost:
+      type: object
+      required: [id, title, author, publishedAt, category, excerpt]
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        author:
+          type: string
+        publishedAt:
+          type: string
+        category:
+          type: string
+        excerpt:
+          type: string
+        content:
+          type: ["string", "null"]
+        imageUrl:
+          type: ["string", "null"]
+        readTime:
+          type: ["string", "null"]
+
+    ContactInput:
+      type: object
+      required: [name, email, message]
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: ["string", "null"]
+        subject:
+          type: ["string", "null"]
+        message:
+          type: string
+
+    NewsletterInput:
+      type: object
+      required: [email]
+      properties:
+        email:
+          type: string
+        firstName:
+          type: ["string", "null"]
+
+    ContactResponse:
+      type: object
+      required: [success, message]
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+
+    ChurchStats:
+      type: object
+      required: [memberCount, yearsEstablished, countriesReached, livesTransformed, weeklyAttendance, missionaryPartners]
+      properties:
+        memberCount:
+          type: integer
+        yearsEstablished:
+          type: integer
+        countriesReached:
+          type: integer
+        livesTransformed:
+          type: integer
+        weeklyAttendance:
+          type: integer
+        missionaryPartners:
+          type: integer
+
+    Testimonial:
+      type: object
+      required: [id, name, role, quote]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        role:
+          type: string
+        quote:
+          type: string
+        avatarUrl:
+          type: ["string", "null"]
+        location:
+          type: ["string", "null"]
+
+    Ministry:
+      type: object
+      required: [id, name, description, leader, meetingTime]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        leader:
+          type: string
+        meetingTime:
+          type: string
+        imageUrl:
+          type: ["string", "null"]
+        category:
+          type: string
