@@ -124,7 +124,7 @@ export function Navbar() {
                     />
                   </div>
                   <span className="font-serif text-2xl tracking-widest font-light text-foreground">
-                    AFM
+                    Apostolic Faith Mission In India
                   </span>
                 </div>
               </Link>
