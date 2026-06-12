@@ -76,7 +76,7 @@ At AFM Church India, everyone is welcome to grow in faith, experience the presen
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1 relative aspect-square lg:aspect-[4/5] max-w-md mx-auto w-full">
             <img 
-              src="https://scontent.fluh1-3.fna.fbcdn.net/v/t39.30808-6/493277842_1234162372050970_4443113290874824005_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=EP-pjYpS6awQ7kNvwHDI3XA&_nc_oc=AdoB6B5cCoFBVQERnVgUODWkz-O0aU47AdZk_tv0buWqTEljSOA1E7JvRKR7gO0K7EewtWcBLB5NBEdMrWFHnhEP&_nc_zt=23&_nc_ht=scontent.fluh1-3.fna&_nc_gid=nxEycbdKmrilUAKuRI4faA&_nc_ss=7b2a8&oh=00_Af_BYuLDtxQjO7DzIQzJANjyuxZufqbL2CAshFxka_b7Og&oe=6A25C8B1" 
+              src="https://scontent.fluh1-3.fna.fbcdn.net/v/t39.30808-6/468647535_9318947898137725_495447707480500956_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1365&ctp=s2048x1365&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Fl4E88Yc-5IQ7kNvwGI1SBz&_nc_oc=AdpMpvR1EoyENAJjEej4jBSNwChOSUmoWTtqwdoRfWMTfXnpeCqoJ5zo8AzUU9A-eGCBWDUPTxa3tWojJCeHHybu&_nc_zt=23&_nc_ht=scontent.fluh1-3.fna&_nc_gid=v7TJQhwbvpzXuX0gUT-nzQ&_nc_ss=7b2a8&oh=00_Af_0f90yvVG_nCCLrDe2i6gMJsr2_b3RAw35X4Y7ZVsroQ&oe=6A3184C6" 
               alt="Lead Pastor" 
               className="w-full h-full object-cover grayscale"
             />

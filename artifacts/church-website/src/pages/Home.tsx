@@ -70,7 +70,7 @@ export default function Home() {
       <section className="relative h-screen w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://scontent.fluh1-2.fna.fbcdn.net/v/t39.30808-6/700708516_1426973766123852_2211573182973582220_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0zKRw9TKYoAQ7kNvwG9gZON&_nc_oc=Ado1ylTTZSDmOBXxZmda08wnaXTHvnoS-zifdXSwxATPJZdrK1KeB3E0eKEEQxNkaULdNr9TjLsDTMuIUhMftC6R&_nc_zt=23&_nc_ht=scontent.fluh1-2.fna&_nc_gid=TK2bfFYkOqE_R3Fvyg8_QA&_nc_ss=7b289&oh=00_Af-KpCwzG4cSd96GVS8rK1E6vUMnErqNWC1IMw0WgUaBVg&oe=6A26B2C2" 
+            src="https://scontent.fluh1-2.fna.fbcdn.net/v/t39.30808-6/700708516_1426973766123852_2211573182973582220_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=7PPrrX4ACccQ7kNvwGx4DF9&_nc_oc=AdqaL3BRmKPdhpFdHVzstrC1w52JPGlAxxRaaRtVQ5d8Y2LetmFwsR6ewXg6UaJUFZj-BpQbnB7QSJs7e_s7zjSY&_nc_zt=23&_nc_ht=scontent.fluh1-2.fna&_nc_gid=p0RWZwvkyRm3HHyYGWXvbQ&_nc_ss=7b2a8&oh=00_Af_WlUImAd6K2Kl_FA3-NzLAe29H9CbIspc2hZaoMNumjw&oe=6A317702"
             alt="Hero background" 
             className="w-full h-full object-cover opacity-80 dark:opacity-40 mix-blend-overlay"
           />
@@ -268,35 +268,39 @@ export default function Home() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-24 border-t border-border bg-card">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-5xl mb-6">Stay Connected</h2>
-          <p className="text-muted-foreground font-light mb-10">
-            Join our mailing list to receive weekly devotionals, updates on global missions, and upcoming event details.
-          </p>
-          <form 
-            onSubmit={form.handleSubmit(onSubscribe)}
-            className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
-          >
-            <Input 
-              placeholder="Your email address" 
-              className="h-14 rounded-none border-border bg-background focus-visible:ring-1 focus-visible:ring-primary flex-1"
-              {...form.register("email")}
-            />
-            <Button 
-              type="submit"
-              className="h-14 rounded-none uppercase tracking-widest text-xs px-8"
-              disabled={subscribeNewsletter.isPending}
-            >
-              Subscribe
-            </Button>
-          </form>
-          {form.formState.errors.email && (
-            <p className="text-destructive text-sm mt-2">{form.formState.errors.email.message}</p>
-          )}
-        </div>
-      </section>
-    </main>
+      <form 
+  name="newsletter"
+  method="POST"
+  data-netlify="true"
+  className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto"
+  onSubmit={(e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    }).then(() => {
+      toast({ title: "Subscribed", description: "You have been added to our newsletter." });
+      form.reset();
+    }).catch(() => {
+      toast({ title: "Error", description: "Failed to subscribe. Please try again.", variant: "destructive" });
+    });
+  }}
+>
+ <input type="hidden" name="form-name" value="newsletter" />
+<Input 
+  placeholder="Your email address" 
+  className="h-14 rounded-none border-border bg-background focus-visible:ring-1 focus-visible:ring-primary flex-1"
+  {...form.register("email")}
+/>
+<Button 
+  type="submit"
+  className="h-14 rounded-none uppercase tracking-widest text-xs px-8"
+>
+    Subscribe
+  </Button>
+</form></main>
   );
 }
 
