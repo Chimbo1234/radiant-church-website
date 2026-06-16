@@ -48,14 +48,14 @@ export const assemblies: Assembly[] = [
     phone: "+91 8059846797",
     email: "philadelphia@afmindia.org",
     established: "31 August 2025",
-    heroImage: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1600&auto=format&fit=crop&q=80",
-    cardImage: "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800&auto=format&fit=crop&q=80",
+    heroImage: "blob:https://web.whatsapp.com/31e14169-198a-4088-bfaa-d79fa7c8daa8",
+    cardImage: "blob:https://web.whatsapp.com/3eff99f3-a725-4c36-965c-b1654a2eabcc",
     leaders: [
       {
         name: "Minister Bertha",
         position: "Preceeding Minister",
         bio: "Minster  has served the Lord faithfully for over a decade, leading with a heart for evangelism and discipleship.",
-        photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80",
+        photo: "blob:https://web.whatsapp.com/7830d4d9-3d26-45f5-a692-ed76ba61454c",
       },
       {
         name: "Nkosilomusa Jecheche",
@@ -79,10 +79,10 @@ export const assemblies: Assembly[] = [
       { name: "Evangelism Team", description: "Taking the Gospel beyond the four walls of the church.", icon: "Globe" },
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1555924640-f37f929c5a98?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1485795046599-702122cd1267?w=600&auto=format&fit=crop&q=80",
+      "blob:https://web.whatsapp.com/8b258bcc-15b8-465b-a0ff-cadc4b2a8ff6",
+      "blob:https://web.whatsapp.com/14d9cef1-39f8-4ab3-8206-75ccc27ea1ac",
+      "blob:https://web.whatsapp.com/3eff99f3-a725-4c36-965c-b1654a2eabcc",
+      "blob:https://web.whatsapp.com/8b258bcc-15b8-465b-a0ff-cadc4b2a8ff6",
     ],
   },
   {
