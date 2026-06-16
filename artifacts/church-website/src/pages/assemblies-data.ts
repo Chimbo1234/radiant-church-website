@@ -48,20 +48,20 @@ export const assemblies: Assembly[] = [
     phone: "+91 8059846797",
     email: "philadelphia@afmindia.org",
     established: "31 August 2025",
-    heroImage: "blob:https://web.whatsapp.com/31e14169-198a-4088-bfaa-d79fa7c8daa8",
-    cardImage: "blob:https://web.whatsapp.com/3eff99f3-a725-4c36-965c-b1654a2eabcc",
+    heroImage: "phila01.jpg",
+    cardImage: "phila02.jpg",
     leaders: [
       {
         name: "Minister Bertha",
         position: "Preceeding Minister",
         bio: "Minster  has served the Lord faithfully for over a decade, leading with a heart for evangelism and discipleship.",
-        photo: "blob:https://web.whatsapp.com/7830d4d9-3d26-45f5-a692-ed76ba61454c",
+        photo: "phila03.jpg",
       },
       {
         name: "Nkosilomusa Jecheche",
         position: "Reverend",
         bio: "Elder Samuel oversees the pastoral care ministry and mentors young believers in the faith.",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop&q=80",
+        photo: "phila02.jpg",
       },
     ],
     serviceTimes: [
@@ -79,10 +79,10 @@ export const assemblies: Assembly[] = [
       { name: "Evangelism Team", description: "Taking the Gospel beyond the four walls of the church.", icon: "Globe" },
     ],
     gallery: [
-      "blob:https://web.whatsapp.com/8b258bcc-15b8-465b-a0ff-cadc4b2a8ff6",
-      "blob:https://web.whatsapp.com/14d9cef1-39f8-4ab3-8206-75ccc27ea1ac",
-      "blob:https://web.whatsapp.com/3eff99f3-a725-4c36-965c-b1654a2eabcc",
-      "blob:https://web.whatsapp.com/8b258bcc-15b8-465b-a0ff-cadc4b2a8ff6",
+      "phila01.jpg",
+      "phila02.jpg",
+      "phila03.jpg",
+      "phila01.jpg",
     ],
   },
   {
