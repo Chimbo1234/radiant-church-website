@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/ministries", label: "Ministries" },
   { href: "/live", label: "Live" },
   { href: "/history", label: "History" },
+  { href: "/assemblies", label: "Assemblies" },
 ];
 
 const LOGO_URL = "https://scontent.fluh1-2.fna.fbcdn.net/v/t39.30808-6/700708516_1426973766123852_2211573182973582220_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=7PPrrX4ACccQ7kNvwGx4DF9&_nc_oc=AdqaL3BRmKPdhpFdHVzstrC1w52JPGlAxxRaaRtVQ5d8Y2LetmFwsR6ewXg6UaJUFZj-BpQbnB7QSJs7e_s7zjSY&_nc_zt=23&_nc_ht=scontent.fluh1-2.fna&_nc_gid=p0RWZwvkyRm3HHyYGWXvbQ&_nc_ss=7b2a8&oh=00_Af_WlUImAd6K2Kl_FA3-NzLAe29H9CbIspc2hZaoMNumjw&oe=6A317702";

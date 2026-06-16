@@ -22,6 +22,10 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import History from "./pages/History";   // ← ADD THIS
 import NotFound from "@/pages/not-found";
+import Assemblies from "./pages/Assemblies";
+import AssemblyDetail from "./pages/AssemblyDetail";
+
+
 
 const queryClient = new QueryClient();
 
@@ -44,6 +48,8 @@ function Router() {
         <Route path="/blog" component={Blog} />
         <Route path="/blog/:id" component={BlogDetail} />
         <Route path="/history" component={History} />  {/* ← ADD THIS */}
+<Route path="/assemblies" component={Assemblies} />
+<Route path="/assemblies/:slug" component={AssemblyDetail} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
