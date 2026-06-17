@@ -146,7 +146,7 @@ export const assemblies: Assembly[] = [
         name: "Nathaniel",
         position: "Preceeding Minister",
         bio: "Pastor Emmanuel is an anointed teacher of the Word with a passion for seeing every believer grow to spiritual maturity.",
-        photo: "/peniel1.8.jpg",
+        photo: "/nath.jpg",
       },
     ],
     serviceTimes: [
